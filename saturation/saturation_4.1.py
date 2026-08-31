@@ -293,7 +293,7 @@ def calculate_energy_deposit(event):
 
 #####################************************************##############################################################################
 #T1P5 = uproot.open("/fs/project/PAS1968/retcr/data/2024/root/datasets/tenPercent/T1P4ListTenPercent.root")
-T1P5 = uproot.open("/users/PAS1968/knivedita/saturation_root/1s.root")
+T1P5 = uproot.open("/users/PAS1968/knivedita/saturation_root/4s.root")
 tree_t1p5 = T1P5["tree"]
 utc_secs10 = tree_t1p5["utc_sec"].array(library='np')
 utc_nsecs10 = tree_t1p5["utc_nsec"].array(library='np')
@@ -349,12 +349,12 @@ for root_file in root_files:
 #with PdfPages(pdf_filename) as pdf:
 lowcount = 0
 highcount=0
-with open('/users/PAS1968/knivedita/data_analysis/1s.csv', 'w', newline='') as f:
+with open('/users/PAS1968/knivedita/data_analysis/4s_1.csv', 'w', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(['loop_i','sec', 'nsec', 'theta', 'phi', 'rms_err', 'core_x', 'core_y', 'xerror', 'yerror','core_x_new','core_y_new','energylog','energylog_new'])
     counter=0
     ### event 71 , 100
-    for sec, nsec in zip(utc_secs10, utc_nsecs10):
+    for sec, nsec in zip(utc_secs10[:30], utc_nsecs10[:30]):
     #for sec, nsec in zip([1719956221],[815478338]):
         try:
             counter=counter+1
@@ -542,3 +542,4 @@ with open('/users/PAS1968/knivedita/data_analysis/1s.csv', 'w', newline='') as f
             continue
             
 ####
+
