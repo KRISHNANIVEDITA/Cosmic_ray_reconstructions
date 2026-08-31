@@ -10,7 +10,7 @@ RET-CR uses five surface stations equipped with scintillator panels to detect co
 - Shower-core position using the lateral distribution of particle deposits.
 - Primary cosmic-ray energy using detector simulations and the reconstructed shower profile.
 - Recovery of energy deposits for events containing saturated scintillator signals.
-- Utilities for getting the energy deposits, data handling and visualisation.
+- Utilities for getting the energy deposits, data handling and visualisation. Results from extensive GEANT4 and CORSIKA simulations were conducted and those are included here in utilities for IceTop scinitillator calibration.
 
 The saturation analysis estimates deposits above the detector’s ADC limit by testing possible values and identifying the solution that best describes the measured lateral distribution.
 
@@ -18,7 +18,7 @@ The reconstructed geometry and energy provide essential inputs for the correspon
 
 ## Data and usage
 
-The scripts operate on calibrated RET-CR scintillator data. Experimental data are not included because they are managed by the Radar Echo Telescope Collaboration. Users must provide input data in the expected format and adapt the relevant input and output paths.
+The scripts operate on calibrated RET-CR scintillator data. Experimental data are not included because they are managed by the Radar Echo Telescope Collaboration. Results from extensive GEANT4 and CORSIKA simulations were conducted and those are included here for scinitillator calibrations. Simulated datasets Users must provide input data in the expected format and adapt the relevant input and output paths.
 
 The analysis uses Python and standard scientific-computing packages, including NumPy, SciPy and Matplotlib. Additional dependencies are specified within the individual scripts.
 
