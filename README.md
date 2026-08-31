@@ -10,7 +10,7 @@ RET-CR uses five surface stations equipped with scintillator panels to detect co
 - Shower-core position using the lateral distribution of particle deposits.
 - Primary cosmic-ray energy using detector simulations and the reconstructed shower profile.
 - Recovery of energy deposits for events containing saturated scintillator signals.
-- Utilities for event selection, detector geometry, data handling and visualisation.
+- Utilities for getting the energy deposits, data handling and visualisation.
 
 The saturation analysis estimates deposits above the detector’s ADC limit by testing possible values and identifying the solution that best describes the measured lateral distribution.
 
