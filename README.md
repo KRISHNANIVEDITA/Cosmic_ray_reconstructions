@@ -24,7 +24,7 @@ The analysis uses Python and standard scientific-computing packages, including N
 
 ## Development status
 
-This repository contains research code used in the RET-CR surface-station analysis. The repository is being progressively organised and documented, and its structure and interfaces may therefore change between versions.
+This repository contains research code used in the RET-CR surface-station analysis. 
 
 ## Related publication
 
