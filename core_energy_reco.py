@@ -162,7 +162,7 @@ def getPanelTemp(panel, radar_sec, radar_nsec):
     datetime_object = datetime.datetime.fromtimestamp(radar_sec)
     #print(f'Getting temp from data for panel {panel} date {datetime_object}')
     #load in the panels root file to get the run number and panel number
-    coincidentPanelDir = '/fs/project/PAS1968/retcr/data/2024/SUR/2024/root/coincidentOnly/'
+    coincidentPanelDir = '/fs/project/......./retcr/data/2024/SUR/2024/root/coincidentOnly/'
     pChain = r.TChain("tree")
     fileBlank = '2024_panel'
     pChain.Add(f'{coincidentPanelDir}2024_panel{panel}.root')
@@ -177,7 +177,7 @@ def getPanelTemp(panel, radar_sec, radar_nsec):
     if 'b' in panelID:
         panelNumber = pChain.stationPanels[1]
     #open the panel run json to check if the temp is correct there
-    runDir = '/fs/project/PAS1968/retcr/data/2024/SUR/2024/'
+    runDir = '/fs/project/.../retcr/data/2024/SUR/2024/'
     runFileName = f'panel_{panelNumber}_run_{runNumber:07d}'
     fileName = f'{runDir}{station}/runs/2024-{datetime_object.month:02d}-{datetime_object.day:02d}/hitBufferRuns/{runFileName}/{runFileName}.json'
     if not os.path.isfile(fileName):
@@ -361,16 +361,16 @@ def energy_reco(Nc,theta):
 """
 # Load the 10% sample 
 """
-T1P5 = uproot.open("/fs/project/PAS1968/retcr/data/2024/root/datasets/tenPercent/T0P3A0H4TenPercent.root")
+T1P5 = uproot.open("/fs/project/..../retcr/data/2024/root/datasets/tenPercent/T0P3A0H4TenPercent.root")
 tree_t1p5 = T1P5["tree"]
 utc_secs10 = tree_t1p5["utc_sec"].array(library='np')
 utc_nsecs10 = tree_t1p5["utc_nsec"].array(library='np')
 
 # Paths to load the data from the ROOT files
 root_files = (
-    glob.glob("/fs/project/PAS1968/retcr/data/2024/root/june0.root") +  glob.glob("/fs/project/PAS1968/retcr/data/2024/root/june1.root")+ glob.glob("/fs/project/PAS1968/retcr/data/2024/root/june2.root")+
-    glob.glob("/fs/project/PAS1968/retcr/data/2024/root/july0.root") + glob.glob("/fs/project/PAS1968/retcr/data/2024/root/july1.root")+glob.glob("/fs/project/PAS1968/retcr/data/2024/root/july2.root")+
-    glob.glob("/fs/project/PAS1968/retcr/data/2024/root/august*.root")
+    glob.glob("/fs/project/..../retcr/data/2024/root/june0.root") +  glob.glob("/fs/project/..../retcr/data/2024/root/june1.root")+ glob.glob("/fs/project/....../retcr/data/2024/root/june2.root")+
+    glob.glob("/fs/project/..../retcr/data/2024/root/july0.root") + glob.glob("/fs/project/....../retcr/data/2024/root/july1.root")+glob.glob("/fs/project/......./retcr/data/2024/root/july2.root")+
+    glob.glob("/fs/project/...../retcr/data/2024/root/august*.root")
 )
 """
 # Define some important lists to store the information about the events
